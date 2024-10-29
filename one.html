@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul class="cities">
+        <li>Karachi</li>
+        <li>Islamabd</li>
+        <li>Peshawar</li>
+        <li>Kpk</li>
+        <li>Lahore</li>
+    </ul>
+    <script>
+        // document.body.style.backgroundColor = "black"
+        // document.body.style.color = "white"
+
+        // there are several ways to edit or remove elements by DOM
+
+        function addLanguague(lang){
+            const li = document.createElement("li")
+            li.innerHTML = lang
+            document.querySelector(".cities").appendChild(li)
+        }
+        addLanguague("Swat")
+
+       // there is another optimize way..
+
+        // function language(langg){
+        //     const div = document.createElement("li")
+        //     div.appendChild(document.createTextNode(langg));
+        //     document.querySelector(".cities").appendChild(li)
+        // }
+        // language("turkey")  
+
+        // Now If we want to edit the element
+
+        const nlang = document.querySelector("li:nth-child(3)");
+        nlang.textContent = "Redbull";
+         
+        // Here we can also change replace the li by creating new element
+
+        const newvar = document.createElement("li")
+        newvar.textContent = "Next Cola"
+        nlang.replaceWith(newvar)
+        
+        // There is a method to remove 
+
+       const remove = document.querySelector("li:first-child")
+       remove.remove()
+
+
+    </script>
+</body>
+</html>
